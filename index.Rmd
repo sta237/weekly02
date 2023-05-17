@@ -1,0 +1,62 @@
+---
+title: "Weekly exercise 2"
+output: 
+  learnr::tutorial:
+    theme: "sandstone"
+    css: css/styles.css
+runtime: shiny_prerendered
+---
+
+
+```{r setup, include=FALSE}
+library("learnr")
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Question 7 a)
+
+Use `ggplot()` to plot the following on a single plot for `x` axis values from `-5` to `5`.
+
+i. Probability density curve of $N(0,1)$ using `dnorm()` in `black`
+solid line.
+ii. Probability density points of $N(0,1)$ evaluated multiples of `0.25`
+with `blue` filled circles without using `dnorm()`.
+iii. Probability density curve of $N(3,0.5^2)$ using `dnorm()` in `black`
+dotted line.
+iv. Probability density points of $N(3,0.5^2)$ evaluated multiples of `0.25`
+with `red` empty circles without using `dnorm()`.
+
+```{r plot, exercise=TRUE, exercise.lines=25}
+library(ggplot2)
+x <- seq(-5, 5, 0.01) # x values for creating plots
+x25 <- # create a vector of valuse from -5 to t
+d1 <- dnorm(x...) # 
+d2 <- (1 / sqrt(2 * pi)) # complete the density function; pi is a prepopulated constant
+d3 <- dnorm(x...) #
+d4 <- (1 / 0.5 * sqrt(2 * pi)) # complete the density function; pi is a prepopulated constant
+
+ggplot() + # complete the ggplot function
+```
+
+
+## Question 7 b)
+
+Suppose Lena owns two coffee shops. At her first shop, the number of daily
+customers, $R$, follows $\text{Pois}(50)$. At her second shop, the number of
+daily customers, $S$, follows $\text{Pois}(30)$. Let $T=R+S$, the total daily
+customers. Use R's built-in functions to randomly sample from Poisson distributions
+to simulate 100,000 days and estimate the median of $T$ by computing the median
+of the simulated $T$ values.
+
+```{r sim-cards, exercise=TRUE, exercise.lines=25}
+N <- 10^5 # 100,000 simulations
+sims <- cbind(
+  # sample from R,
+  # sample from S
+)
+simT <- # store simulated totals
+# compute the probability estimates
+```
+
+> `cbind(x, y)` combines vectors into a matrix as columns.
+
