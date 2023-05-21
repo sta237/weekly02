@@ -29,7 +29,7 @@ with `red` empty circles without using `dnorm()`.
 ```{r plot, exercise=TRUE, exercise.lines=25}
 library(ggplot2)
 x <- seq(-5, 5, 0.01) # x values for creating plots
-x25 <- # create a vector of integer values from -5 to 5
+x25 <- # create a vector values from -5 to 5 in multiples of 0.25
 d1 <- dnorm(x...) # 
 d2 <- (1 / sqrt(2 * pi)) # complete the density function; pi is a prepopulated constant
 d3 <- dnorm(x...) #
